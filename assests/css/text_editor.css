@@ -1,8 +1,8 @@
 iframe
 {
-	width:1500px;
+	width:800px;
 	border-radius:5px;
-	height:100px;
+	height:200px;
 	overflow:auto;
 	}
 
@@ -14,11 +14,9 @@ iframe
 {	
 	background-color:#FFFF00;
 }
-div#color-picker-background
+div.colorPicker-swatch
 {
-	border:2px solid #000000;
-}
-div#colorPicker-swatch
-{
-	width:0px;
+	margin-top:0px;
+	width:100px;
+	margin-left:10px;
 	}

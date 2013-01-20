@@ -4,7 +4,7 @@ $(document).ready(function() {
 	cw.document.close();
 	cw.focus();
 	
-	
+		//$('button').each().addClasss('btn btn-small');
 		$('#color').colorPicker();  //displays the color pallette
 								//$('#color2').colorPicker();
 		$("div.colorPicker-swatch").click(function() {
@@ -27,13 +27,13 @@ $(document).ready(function() {
 	
 		function CheckSelectedClass()
 		{
-				if($(this).children("button").hasClass("selected"))
+				if($(this).children("button").hasClass("btn-primary"))
 				{
-					$(this).removeClass("selected");
+					$(this).removeClass("btn-primary");
 				}
 				else
 				{
-					$(this).addClass("selected");
+					$(this).addClass("btn-primary");
 				}
 		}
 		
