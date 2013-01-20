@@ -37,16 +37,18 @@ $(document).ready(function() {
 				}
 		}
 		
-		$("a").click( function() {
+		$("a.common").click( function() {
 			
 			var id = $(this).attr("id");
-			if(id==bold||italic||underline)
-			{
-				CheckSelectedClass();
-				cw.document.execCommand(id,false,"");
-				cw.focus();
-				return false;
-			}
+			CheckSelectedClass();
+			cw.document.execCommand(id,false,"");
+			cw.focus();
+			return false;
+		});
+		
+		$("a#delete").click( function() {
+			cw.document.execCommand("delete",false,"");
+			cw.focus();
 			return false;
 		});
 		
@@ -64,6 +66,11 @@ $(document).ready(function() {
 			cw.focus();
 			return false;
 		});
-		
+		$("a#paste").click(function() {
+			//var cp = $(this).attr("id");
+			cw.document.execCommand("paste",false,"");
+			cw.focus();
+			return false;
+		});
 	
 });
